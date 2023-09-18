@@ -15,7 +15,15 @@
       "discord": "Maxime#1562"
     }
   ],
-  "relationships": {},
+  "relationships": {
+    "systems": [
+      {
+        "id": "swade",
+        "type": "system",
+        "compatibility": {}
+      }
+    ]
+  },
   "conflicts": [],
   "socket": true,
   "scripts": [],
@@ -23,8 +31,8 @@
   "styles": ["./build/swade-fear-points.css"],
   "flags": {
     "hotReload": {
-      "extensions": ["css", "hbs"],
-      "paths": ["build/swade-fear-points.css", "templates/*.hbs"]
+      "extensions": ["css", "json", "hbs"],
+      "paths": ["build/swade-fear-points.css", "languages/*.json", "templates/*.hbs"]
     }
   },
   "languages": [
