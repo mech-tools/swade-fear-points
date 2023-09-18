@@ -5,7 +5,7 @@
 
 Adds a fear points counter that modifies Spirit dice rolls:
 
-![](./screenshot.jpg)
+![](./screenshot-1.jpg)
 
 Settings include:
 
