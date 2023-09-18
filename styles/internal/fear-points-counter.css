@@ -1,5 +1,10 @@
 #swade-fear-points-display .fear-points-display {
+  background-image: url(/systems/swade/assets/main_bg.webp);
+  background-position: 0 0;
+  background-repeat: repeat;
   display: flex;
+  margin: -8px;
+  padding: 8px;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
