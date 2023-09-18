@@ -8,13 +8,17 @@ import { CONSTANTS } from "../shared/constants";
 export const alterSpiritAttributeRolls = () => {
   // Before a SWADE attribute roll (e.g: Spirit)
   Hooks.on("swadePreRollAttribute", (actor, attribute, roll, modifiers) => {
+    if (attribute !== "spirit") return;
+
+    const fearPoints = getFearPoints();
+    if (fearPoints < 1) return;
+
     const charactersOnly = game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.CHARACTERS_ONLY);
     if (charactersOnly && actor.type !== "character") return;
-    if (attribute !== "spirit") return;
 
     modifiers.push({
       label: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.modifier-label`),
-      value: `- ${getFearPoints()}`,
+      value: `- ${fearPoints}`,
       ignore: false
     });
   });

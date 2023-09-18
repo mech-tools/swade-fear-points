@@ -8,9 +8,10 @@ import { CONSTANTS } from "../shared/constants";
 export const updateGlobalFearPoints = () => {
   // When global settings are modified (e.g: fear points setting)
   Hooks.on("updateSetting", (setting) => {
+    if (setting.key !== `${CONSTANTS.MODULE_NAME}.${SETTINGS.GLOBAL_POINTS}`) return;
+
     const perScenePoints = game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.PER_SCENE);
     if (perScenePoints) return;
-    if (setting.key !== `${CONSTANTS.MODULE_NAME}.${SETTINGS.GLOBAL_POINTS}`) return;
 
     FearPointsCounter.update();
   });
@@ -30,12 +31,13 @@ export const updatePerSceneFearPoints = () => {
 
   // When scene is updated (e.g: fear points flag)
   Hooks.on("updateScene", (scene, diff) => {
-    const perScenePoints = game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.PER_SCENE);
-    if (!perScenePoints) return;
     if (
       !foundry.utils.hasProperty(diff, `flags.${CONSTANTS.MODULE_NAME}.${SETTINGS.GLOBAL_POINTS}`)
     )
       return;
+
+    const perScenePoints = game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.PER_SCENE);
+    if (!perScenePoints) return;
 
     FearPointsCounter.update();
   });
