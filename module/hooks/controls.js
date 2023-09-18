@@ -13,10 +13,10 @@ export const addFearPointsControl = () => {
 
     let group = controls.find((b) => b.name == "token");
     group.tools.push({
-      name: "display",
+      name: "fear-points",
       title: `${CONSTANTS.MODULE_NAME}.control-button-title`,
       icon: "fa-solid fa-face-scream",
-      buttons: true,
+      button: true,
       onClick: () => {
         FearPointsCounter.render();
       }

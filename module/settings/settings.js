@@ -30,7 +30,7 @@ export function registerSettings() {
     config: true,
     default: true,
     type: Boolean,
-    onChange: () => debouncedReload()
+    requiresReload: true
   });
 
   // Open on startup setting
