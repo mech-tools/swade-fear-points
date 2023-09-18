@@ -1,0 +1,50 @@
+{
+  "id": "swade-fear-points",
+  "title": "SWADE - Fear Points",
+  "description": "Adds a fear points counter that modifies Spirit dice rolls.",
+  "version": "",
+  "library": "false",
+  "compatibility": {
+    "minimum": 11,
+    "verified": "11.308"
+  },
+  "authors": [
+    {
+      "name": "DarKDinDoN",
+      "url": "https://github.com/DarKDinDoN",
+      "discord": "Maxime#1562"
+    }
+  ],
+  "relationships": {},
+  "conflicts": [],
+  "socket": true,
+  "scripts": [],
+  "esmodules": ["./build/swade-fear-points.js"],
+  "styles": ["./build/swade-fear-points.css"],
+  "flags": {
+    "hotReload": {
+      "extensions": ["css", "hbs"],
+      "paths": ["build/swade-fear-points.css", "templates/*.hbs"]
+    }
+  },
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "languages/fr.json"
+    }
+  ],
+  "url": "",
+  "bugs": "",
+  "changelog": "",
+  "manifest": "",
+  "download": "",
+  "license": "",
+  "readme": "",
+  "media": []
+}

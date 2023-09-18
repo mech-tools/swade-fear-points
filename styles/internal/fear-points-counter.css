@@ -1,0 +1,18 @@
+#swade-fear-points-display .fear-points-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  .count {
+    color: var(--section-header-color);
+    font-size: 70px;
+    width: 70px;
+    text-align: center;
+  }
+
+  button {
+    font-size: 40px;
+    cursor: pointer;
+  }
+}
