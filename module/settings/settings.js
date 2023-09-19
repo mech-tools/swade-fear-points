@@ -1,7 +1,5 @@
+import { FearPointsCounter } from "../apps/FearPointsCounter";
 import { CONSTANTS } from "../shared/constants";
-
-/** Debounce calls before reloading page */
-const debouncedReload = foundry.utils.debounce(() => window.location.reload(), 500);
 
 /** Settings global names */
 export const SETTINGS = {
@@ -53,13 +51,14 @@ export function registerSettings() {
     type: Boolean
   });
 
-  // Character only setting
+  // Per scene setting
   game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.PER_SCENE, {
     name: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.${SETTINGS.PER_SCENE}-name`),
     hint: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.${SETTINGS.PER_SCENE}-hint`),
     scope: "world",
     config: true,
     default: false,
-    type: Boolean
+    type: Boolean,
+    onChange: () => FearPointsCounter.update()
   });
 }

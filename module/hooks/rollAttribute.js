@@ -6,7 +6,7 @@ import { CONSTANTS } from "../shared/constants";
  * Modify the spirit attributes depending on the current fear points (roll - fear points)
  */
 export const alterSpiritAttributeRolls = () => {
-  // Before a SWADE attribute roll (e.g: Spirit)
+  // Before a SWADE attribute roll (e.g: spirit)
   Hooks.on("swadePreRollAttribute", (actor, attribute, roll, modifiers) => {
     if (attribute !== "spirit") return;
 

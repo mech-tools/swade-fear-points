@@ -3,7 +3,7 @@
 
 # SWADE - Fear Points
 
-Adds a fear points counter that modifies Spirit dice rolls:
+Adds a fear points counter that modifies spirit dice rolls:
 
 ![](./screenshot-1.jpg)
 

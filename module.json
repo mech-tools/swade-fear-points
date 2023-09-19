@@ -1,7 +1,7 @@
 {
   "id": "swade-fear-points",
   "title": "SWADE - Fear Points",
-  "description": "Adds a fear points counter that modifies Spirit dice rolls.",
+  "description": "Adds a fear points counter that modifies spirit dice rolls.",
   "version": "",
   "library": "false",
   "compatibility": {
