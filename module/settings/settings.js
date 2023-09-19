@@ -1,5 +1,6 @@
 import { FearPointsCounter } from "../apps/FearPointsCounter";
 import { CONSTANTS } from "../shared/constants";
+import { debouncedReload } from "../shared/helpers";
 
 /** Settings global names */
 export const SETTINGS = {
@@ -28,7 +29,7 @@ export function registerSettings() {
     config: true,
     default: true,
     type: Boolean,
-    requiresReload: true
+    onChange: () => (game.users.current.isGM ? null : debouncedReload())
   });
 
   // Open on startup setting
