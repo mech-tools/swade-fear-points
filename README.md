@@ -13,3 +13,4 @@ Settings include:
 - Show window at startup
 - Characters only
 - Per scene fear points counter
+- Vignette effect on scenes as fear points increase
