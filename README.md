@@ -11,5 +11,5 @@ Settings include:
 
 - Player visibility of the fear points counter window
 - Show window at startup
-- Characters only modified spirit attribute rolls
+- Characters only
 - Per scene fear points counter
