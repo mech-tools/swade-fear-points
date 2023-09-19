@@ -1,6 +1,7 @@
 {
   "swade-fear-points": {
-    "window-title": "Fear",
+    "window-title": "Fear counter",
+    "modifier-label": "Fear",
     "control-button-title": "Fear points controls",
     "player-visibility-name": "Player visibility (world)",
     "player-visibility-hint": "Controls whether the players can display the fear points counter or not.",
@@ -10,6 +11,7 @@
     "characters-only-hint": "If enabled, only characters will be affected by fear points.",
     "per-scene-name": "Per scene points (world)",
     "per-scene-hint": "If enabled, default behavior will be modified, and fear points will be awarded per scene.",
-    "modifier-label": "Fear"
+    "vignette-effect-name": "Scene vignette effect (world)",
+    "vignette-effect-hint": "If enabled, this setting adds a vignette effect to the scene as fear points increase."
   }
 }

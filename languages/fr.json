@@ -1,6 +1,7 @@
 {
   "swade-fear-points": {
-    "window-title": "Peur",
+    "window-title": "Compteur de peur",
+    "modifier-label": "Peur",
     "control-button-title": "Contrôles des points de peur",
     "player-visibility-name": "Visible aux joueurs (monde)",
     "player-visibility-hint": "Contrôle si le compteur de points de peur est visible aux joueurs ou non.",
@@ -10,6 +11,7 @@
     "characters-only-hint": "Si activé, uniquement les personnages joueurs seront affectés par les points de peur.",
     "per-scene-name": "Points de peur par scène (monde)",
     "per-scene-hint": "Si activé, le comportement par défaut sera modifié et les points de peur seront attribués par scène.",
-    "modifier-label": "Peur"
+    "vignette-effect-name": "Effet de vignette des scènes (monde)",
+    "vignette-effect-hint": "Si activé, ce paramètre rajoute un effet de vignette sur la scène au fur et à mesure que les points de peur augmentent."
   }
 }

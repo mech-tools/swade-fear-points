@@ -1,6 +1,4 @@
-import { FearPointsCounter } from "../apps/FearPointsCounter";
 import { CONSTANTS } from "../shared/constants";
-import { debouncedReload } from "../shared/helpers";
 
 /** Settings global names */
 export const SETTINGS = {
@@ -8,7 +6,8 @@ export const SETTINGS = {
   OPEN_AT_STARTUP: "open-at-startup",
   PLAYER_VISIBILITY: "player-visibility",
   CHARACTERS_ONLY: "characters-only",
-  PER_SCENE: "per-scene"
+  PER_SCENE: "per-scene",
+  VIGNETTE_EFFECT: "vignette-effect"
 };
 
 /** Register settings */
@@ -29,7 +28,7 @@ export function registerSettings() {
     config: true,
     default: true,
     type: Boolean,
-    onChange: () => (game.users.current.isGM ? null : debouncedReload())
+    requiresReload: true
   });
 
   // Open on startup setting
@@ -60,6 +59,17 @@ export function registerSettings() {
     config: true,
     default: false,
     type: Boolean,
-    onChange: () => FearPointsCounter.update()
+    requiresReload: true
+  });
+
+  // Vignette effect setting
+  game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.VIGNETTE_EFFECT, {
+    name: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.${SETTINGS.VIGNETTE_EFFECT}-name`),
+    hint: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.${SETTINGS.VIGNETTE_EFFECT}-hint`),
+    scope: "world",
+    config: true,
+    default: true,
+    type: Boolean,
+    requiresReload: true
   });
 }
