@@ -26,7 +26,7 @@ export const getFearPoints = () => {
 export const getFearPointsPerRuling = () => {
   const errata2023 = game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.ERRATA_2023);
 
-  return errata2023 ? Math.ceil(getFearPoints() / 2) : getFearPoints();
+  return errata2023 ? Math.max(getFearPoints() - 2, 0) : getFearPoints();
 };
 
 /**

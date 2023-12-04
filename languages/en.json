@@ -4,7 +4,7 @@
     "modifier-label": "Fear",
     "control-button-title": "Fear points controls",
     "errata-2023-name": "Errata 2023 (world)",
-    "errata-2023-hint": "If activated, the spirit modifier is -1 for every 2 points of fear, instead of -1 for each point of fear.",
+    "errata-2023-hint": "If activated, the spirit modifier is -1 for each point of fear beyond the second, instead of -1 for each point.",
     "player-visibility-name": "Player visibility (world)",
     "player-visibility-hint": "Controls whether the players can display the fear points counter or not.",
     "open-at-startup-name": "Open at startup (world)",
