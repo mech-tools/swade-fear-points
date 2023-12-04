@@ -7,7 +7,7 @@ Adds a fear points counter that modifies spirit dice rolls:
 
 ![](./screenshot-1.jpg)
 
-Settings include:
+**Settings include:**
 
 - Errata 2023: spirit modifier is -1 for every 2 points of fear, instead of -1 for each point of fear
 - Player visibility of the fear points counter window
