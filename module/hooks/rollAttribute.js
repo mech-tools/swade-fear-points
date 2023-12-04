@@ -1,4 +1,4 @@
-import { getFearPoints } from "../apps/FearPointsCounter";
+import { getFearPointsPerRuling } from "../apps/FearPointsCounter";
 import { SETTINGS } from "../settings/settings";
 import { CONSTANTS } from "../shared/constants";
 
@@ -10,7 +10,7 @@ export const alterSpiritAttributeRolls = () => {
   Hooks.on("swadePreRollAttribute", (actor, attribute, roll, modifiers) => {
     if (attribute !== "spirit") return;
 
-    const fearPoints = getFearPoints();
+    const fearPoints = getFearPointsPerRuling();
     if (fearPoints < 1) return;
 
     const charactersOnly = game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.CHARACTERS_ONLY);

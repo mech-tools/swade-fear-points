@@ -20,6 +20,16 @@ export const getFearPoints = () => {
 };
 
 /**
+ * Get the current fear points per ruling
+ * @returns {integer} current fear points
+ */
+export const getFearPointsPerRuling = () => {
+  const errata2023 = game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.ERRATA_2023);
+
+  return errata2023 ? Math.ceil(getFearPoints() / 2) : getFearPoints();
+};
+
+/**
  * Set a new value for the fear point setting
  * @param {integer} points the new points
  */

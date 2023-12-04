@@ -3,6 +3,7 @@ import { CONSTANTS } from "../shared/constants";
 /** Settings global names */
 export const SETTINGS = {
   GLOBAL_POINTS: "global-points",
+  ERRATA_2023: "errata-2023",
   OPEN_AT_STARTUP: "open-at-startup",
   PLAYER_VISIBILITY: "player-visibility",
   CHARACTERS_ONLY: "characters-only",
@@ -18,6 +19,17 @@ export function registerSettings() {
     config: false,
     default: 0,
     type: Number
+  });
+
+  // Errata ruling
+  game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.ERRATA_2023, {
+    name: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.${SETTINGS.ERRATA_2023}-name`),
+    hint: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.${SETTINGS.ERRATA_2023}-hint`),
+    scope: "world",
+    config: true,
+    default: true,
+    type: Boolean,
+    requiresReload: true
   });
 
   // Player visibility setting

@@ -1,5 +1,5 @@
 import { OldFilmFilter } from "@pixi/filter-old-film";
-import { FearPointsCounter, getFearPoints } from "../apps/FearPointsCounter";
+import { FearPointsCounter, getFearPointsPerRuling } from "../apps/FearPointsCounter";
 import { SETTINGS } from "../settings/settings";
 import { CONSTANTS } from "../shared/constants";
 
@@ -97,7 +97,7 @@ const createVignetteFilter = () => {
  * Update the vignette filter depending on the current fear points
  */
 const updateVignetteFilter = () => {
-  const fearPoints = Math.min(getFearPoints(), 6);
+  const fearPoints = Math.min(getFearPointsPerRuling(), 6);
 
   vignetteFilter = foundry.utils.mergeObject(vignetteFilter, {
     noise: fearPoints > 4 ? 0.1 : 0,
