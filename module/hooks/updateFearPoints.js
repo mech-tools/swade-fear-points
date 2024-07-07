@@ -63,7 +63,7 @@ const updateEnvironmentFilters = () => {
 
   if (!vignetteFilter) createVignetteFilter();
 
-  const environmentFilters = canvas.environment.filters.filter(
+  const environmentFilters = (canvas.environment.filters || []).filter(
     (f) => f.id !== CONSTANTS.MODULE_NAME
   );
 

@@ -86,7 +86,7 @@ export class FearPointsCounter extends Application {
 
   /** @override */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       id: "swade-fear-points-display",
       template: `${CONSTANTS.PATH}templates/fear-points-counter.hbs`,
       top: 100,

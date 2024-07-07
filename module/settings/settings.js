@@ -80,7 +80,7 @@ export function registerSettings() {
     hint: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.${SETTINGS.VIGNETTE_EFFECT}-hint`),
     scope: "world",
     config: true,
-    default: true,
+    default: false,
     type: Boolean,
     requiresReload: true
   });

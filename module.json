@@ -5,8 +5,8 @@
   "version": "",
   "library": "false",
   "compatibility": {
-    "minimum": 11,
-    "verified": "11.315"
+    "minimum": 12,
+    "verified": 12
   },
   "authors": [
     {
@@ -24,7 +24,6 @@
       }
     ]
   },
-  "conflicts": [],
   "socket": true,
   "scripts": [],
   "esmodules": ["./build/swade-fear-points.js"],
