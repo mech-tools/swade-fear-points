@@ -4,7 +4,7 @@
   "private": true,
   "description": "Adds a fear points counter that modifies spirit dice rolls.",
   "license": "MIT",
-  "author": "DarKDinDoN",
+  "author": "Maxime",
   "scripts": {
     "build": "gulp build",
     "gulp": "gulp"
