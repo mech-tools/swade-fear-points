@@ -59,10 +59,12 @@ export const decrementFearPoint = async () => {
   await setFearPoints(newFearPoints);
 };
 
+const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
+
 /**
  * Fear points counter application
  */
-export class FearPointsCounter extends Application {
+export class FearPointsCounter extends HandlebarsApplicationMixin(ApplicationV2) {
   /**
    * Create and store an instance
    */
@@ -85,41 +87,36 @@ export class FearPointsCounter extends Application {
   }
 
   /** @override */
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      id: "swade-fear-points-display",
-      template: `${CONSTANTS.PATH}templates/fear-points-counter.hbs`,
+  static DEFAULT_OPTIONS = {
+    id: "swade-fear-points-display",
+    window: {
+      resizable: false
+    },
+    actions: {
+      incrementFearPoint: incrementFearPoint,
+      decrementFearPoint: decrementFearPoint
+    },
+    position: {
       top: 100,
       left: 120,
-      height: 150,
-      resizable: false,
-      popout: false,
-      title: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.window-title`),
-      background: "none"
-    });
-  }
+      height: 150
+    }
+  };
 
   /** @override */
-  constructor() {
-    super();
-  }
+  static PARTS = {
+    hud: { template: `${CONSTANTS.PATH}templates/fear-points-counter.hbs` }
+  };
 
   /** @override */
-  activateListeners(html) {
-    super.activateListeners(html);
-
-    const rawHtml = html[0];
-
-    const plusButton = rawHtml.querySelector(".fear-plus-button");
-    if (plusButton) plusButton.addEventListener("click", incrementFearPoint);
-
-    const minusButton = rawHtml.querySelector(".fear-minus-button");
-    if (minusButton) minusButton.addEventListener("click", decrementFearPoint);
+  get title() {
+    return game.i18n.localize(`${CONSTANTS.MODULE_NAME}.window-title`);
   }
 
-  /** @override */
-  getData() {
+  /** @inheritdoc */
+  async _prepareContext(options) {
     return {
+      ...(await super._prepareContext(options)),
       fearPoints: getFearPoints(),
       isGm: game.user.isGM
     };

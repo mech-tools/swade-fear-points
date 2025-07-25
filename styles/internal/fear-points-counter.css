@@ -1,23 +1,29 @@
-#swade-fear-points-display .fear-points-display {
-  background-image: url(/systems/swade/assets/main_bg.webp);
-  background-position: 0 0;
-  background-repeat: repeat;
-  display: flex;
-  margin: -8px;
-  padding: 8px;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-
-  .count {
-    color: var(--section-header-color);
-    font-size: 70px;
-    width: 70px;
-    text-align: center;
+#swade-fear-points-display {
+  .window-content {
+    padding: 0;
   }
 
-  button {
-    font-size: 40px;
-    cursor: pointer;
+  .fear-points-display {
+    background-image: url(/systems/swade/assets/main_bg.webp);
+    background-position: 0 0;
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+    .count {
+      color: var(--section-header-color);
+      font-size: 70px;
+      width: 70px;
+      text-align: center;
+    }
+
+    button {
+      font-size: 40px;
+      cursor: pointer;
+      color: rgb(17, 17, 17);
+    }
   }
 }

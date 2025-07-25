@@ -11,15 +11,14 @@ export const addFearPointsControl = () => {
     const playerVisibility = game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.PLAYER_VISIBILITY);
     if (!playerVisibility && !game.user.isGM) return;
 
-    let group = controls.find((b) => b.name == "token");
-    group.tools.push({
+    controls.tokens.tools["fear-points"] = {
       name: "fear-points",
       title: `${CONSTANTS.MODULE_NAME}.control-button-title`,
       icon: "fa-solid fa-face-scream",
       button: true,
-      onClick: () => {
+      onChange: () => {
         FearPointsCounter.render();
       }
-    });
+    };
   });
 };
