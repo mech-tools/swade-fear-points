@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Foundry-v12-informational)
+![](https://img.shields.io/badge/Foundry-v13-informational)
 ![Latest Release Download Count](https://img.shields.io/github/downloads/mech-tools/swade-fear-points/latest/module.zip)
 
 # SWADE - Fear Points
